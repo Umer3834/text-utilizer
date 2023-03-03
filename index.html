@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>calculator</title>
+</head>
+<body>
+    <h1 class="text-center text-[40px] font-bold">'this calculator is developrd by <span style="color: red;"> umer</span>'</h1>
+  <div class="one h-[80vh] sm:w-[380px] w-[370px] bg-purple-500 sm:m-[auto]    rounded-[20px]">
+    <input class=" umer h-[70px] w-[85%] ml-[30px] mt-[15px] rounded-3xl" type="text">
+    <div class="one justify-between px-10 py-7 ">
+    <div>
+     <button class=" bg-gray-800 text-white text-[40px] rounded-xl px-5 ">c</button>
+     <button class="  bg-gray-800 text-white text-[20px] rounded-xl py-4 px-5 ">del</button>
+     <button class="  bg-gray-800 text-white text-[40px] rounded-xl px-6 ">/</button>
+     <button class="  bg-gray-800 text-white text-[40px] rounded-xl  px-6 ">*</button>
+
+</div>
+<div>
+    <button class=" bg-gray-800 text-white text-[40px] rounded-xl px-5">7</button>
+    <button class="  bg-gray-800 text-white text-[40px] rounded-xl px-5 ">8</button>
+    <button class="  bg-gray-800 text-white text-[40px] rounded-xl px-5 ">9</button>
+    <button class=" bg-gray-800 text-white text-[40px] rounded-xl px-6">-</button>
+    
+</div>
+<div>
+    <button class=" bg-gray-800 text-white text-[40px] rounded-xl px-5">4</button>
+    <button class="  bg-gray-800 text-white text-[40px] rounded-xl px-5  ">5</button>
+    <button class="  bg-gray-800 text-white text-[40px] rounded-xl px-5 ">6</button>
+    <button class="  bg-gray-800 text-white text-[40px] rounded-xl px-5 ">+</button>
+    
+</div>
+<div>
+    <button class=" bg-gray-800 text-white text-[40px] rounded-xl px-5">1</button>
+    <button class=" bg-gray-800 text-white text-[40px] rounded-xl px-5  ">2</button>
+    <button class="  bg-gray-800 text-white text-[40px] rounded-xl px-5 ">3</button>
+    
+</div>
+<div class="flex">
+    
+    <button class="  bg-gray-800 text-white text-[40px] rounded-xl px-14 ">0</button>
+    <button class="   bg-gray-800 text-white  rounded-xl two px-7  ">.</button>
+    
+</div>
+<button class="   bg-gray-800 text-white text-[40px] rounded-xl px-5 py-8  relative -top-[140px] left-[72%] ">=</button>
+</div>
+</div>
+
+
+
+    
+           
+    
+    <script>
+        var inp=document.getElementsByTagName('input')[0]
+      var btn=document.querySelectorAll('button')
+      btn.forEach((ele)=>{
+       
+        ele.addEventListener('click',(e)=>{
+            if(e.target.innerText=='del' ){
+              inp.value=inp.value.slice(0,-1)
+            }
+            if(e.target.innerText=='c'){
+                inp.value=''
+            }
+            if(e.target.innerText=='='){
+            var z=eval(inp.value)
+            inp.value=z
+        }
+        else if(e.target.innerText!='=' && e.target.innerText!='c' && e.target.innerText!='del'  ){
+            inp.value+=e.target.innerText    
+
+        }
+        console.log(e.target.innerText)
+        
+        })
+      })
+    </script>
+
+
+
+</body>
+</html>

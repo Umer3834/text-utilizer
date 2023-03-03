@@ -1,0 +1,31 @@
+*{
+    margin: 0%;
+    padding:0%;
+    border: 1px solid #000;
+}
+.one{
+    
+}
+.one button {
+    margin-top: 10px;
+    margin-left: 5px;
+    box-shadow: 5px 5px 3px white;
+}
+.two{
+    box-sizing: border-box !important;
+    line-height: 20px !important;
+}
+.umer{
+    box-shadow: 5px 10px 5px black ;
+    border-top: 5px solid lightgray;
+    font-size: 30px;
+    padding-left: 20px;
+    
+    
+    
+}
+h1{
+    font-family:'Times New Roman', Times, serif;
+}
+
+
